@@ -35,6 +35,5 @@ class DownloadPicPipeline(ImagesPipeline):
         name = re.sub(r'[？\\*|“<>:/]', '', name)
         # 分文件夹存储的关键：{0}对应着name；{1}对应着image_guid
         filename = u'{2}/{0}/{1}'.format(class_name, image_guid, name)
-        print(filename)
         return filename
 
